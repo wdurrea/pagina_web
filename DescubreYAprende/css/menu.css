@@ -1,0 +1,60 @@
+/*boton menu*/
+#menu-bar{
+  display: none;
+}
+
+header label{
+  float: right;
+  font-size: 26px;
+  margin: 6px 0;
+  cursor: pointer; /*cursor*/
+}
+.menu{
+  font-size: 1.5em;
+  position: absolute; /*encima de todo*/
+  top: 50px; /*para comenzar desde abajo del titulo*/
+  left: 0;
+/*  width: 100vh;*/
+  height: 100vh; /*alto de la ventana siempre*/
+  background: rgba(45, 79, 79, 0.88);
+  transition: all 0.5s; /*ver como se traslada*/
+  transform: translateX(-100%);
+}
+
+.menu a{
+  display:block;
+  color: white; /*letra*/
+  height: 50px; /*altura*/
+  padding: 20px;
+  text-decoration: none;
+  /*border-bottom: 3px dashed rgba(255, 255, 255, 0.9);  /*lineas separadoras*/
+}
+/*cuando se pasa el mouse*/
+.menu a:hover{
+  background-color: rgba(255, 255, 255, 0.5);
+  text-decoration: underline;
+}
+/*Al dar clic en el label --> menu desplegable*/
+#menu-bar:checked ~ .menu{
+  transform: translateX(0%);
+}
+
+/*para escritorio*/
+@media (min-width:1024px) {
+  .menu{
+    position: static;
+    width: auto;
+    height: auto;
+    transform: translateX(0%); /*en web ya no se traslada*/
+    float: right;
+    display: flex;
+  }
+
+  .menu a{
+    border: none; /*quitando as rayas*/
+  }
+  /*quitar el botpn de menu*/
+  header label{
+    display: none;
+  }
+}

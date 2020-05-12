@@ -1,0 +1,71 @@
+#banner{
+  margin-top: 50px;
+  position: relative;
+}
+
+#banner img{ /*imagen dentro del banner*/
+  width: 100%;
+  height: 100%;
+}
+
+#banner .contenedor{
+  position: absolute; /*de acuerdo al baner*/
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+#banner  h2{
+  font-size: 1.2em;
+  color: white;
+}
+
+#banner a{
+  font-size: 1.2em; /*tamaño letra*/
+  font-weight: bold;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 3px 12px;
+  margin-top: 8px;
+  border: groove 3px white;
+  border-radius:4em;
+}
+
+
+#banner a:hover{
+  background: rgba(51, 51, 51, 0.5); /*coor al ponerle el mouse*/
+  text-decoration: underline;
+}
+
+@media (min-width:480px) {
+  #banner h2{
+    font-size: 1.4em;
+  }
+  #banner a{
+    margin-top: 20px;
+  }
+}
+
+@media (min-width:768px) {
+  #banner{
+    height: 300px; /*altura*/
+    overflow: hidden; /*para que no se salga del banner*/
+  }
+  #banner img{
+    height: auto; /*altura automatica*/
+    margin-top: -20px; /*acomodar imagen*/
+  }
+}
+
+@media (min-width:1024px) {
+  #banner{
+    height: 333px; /*altura*/
+    overflow: hidden; /*para que no se salga del banner*/
+  }
+  #banner img{
+    height: auto; /*altura automatica*/
+    margin-top: -120px; /*negativo para que suba*/
+  }
+}
